@@ -12,6 +12,77 @@ from collections import OrderedDict
 import random
 from mixup import Mixup
 
+""""
+--use_extra_macro_data\
+--hsta_num
+4\
+--depth_choice_num
+2\
+--model
+cross_uni_hsta_base_224\
+--num_frames
+6\
+--fill_by_zeros_or_img
+img\
+--no_save_ckpt\
+--use_emothion_or_objective_class_as_label
+objective_class\
+--use_weight_loss
+False\
+--data_set
+casme3\
+--nb_classes
+7\
+--data_path
+${DATA_PATH}\
+--log_dir" C:\Users\saxen\Downloads\HSTA_MER-main\HSTA_MER-main\output"\
+--k_folds
+5\
+--output_dir"C:\Users\saxen\Downloads\HSTA_MER-main\HSTA_MER-main\output"\
+--batch_size
+32\
+--device_num
+${device_num}\
+--input_size
+224\
+--short_side_size
+224\
+--save_ckpt_freq
+200\
+--sampling_rate
+4\
+--opt
+adamw
+\
+--lr
+0.0005\
+--val_freq
+1\
+--opt_betas
+0.9,0.999\
+--weight_decay
+0.05\
+--sh_name
+${script_name}\
+--epochs
+150\
+--test_num_segment
+2\
+--test_num_crop
+3\
+--prefetch_generator\
+--fc_drop_rate
+0.4\
+--drop
+0.2\
+--drop_path
+0.2\
+--layer_decay
+0.90\
+--no_noise\
+--model_header_mode
+2
+"""
 from timm.models import create_model
 from timm.loss import LabelSmoothingCrossEntropy, SoftTargetCrossEntropy
 from timm.utils import ModelEma
